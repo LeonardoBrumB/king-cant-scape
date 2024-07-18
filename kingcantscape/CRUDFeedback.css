@@ -1,0 +1,42 @@
+.feedbacks-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+    font-size: large;
+}
+
+.feedback-publicar {
+    margin-top: 30px;
+}
+
+.table {
+    width: 80%;
+    margin-top: 2%;
+    margin-left: 10%;
+    border-bottom: none;
+}
+
+.table-2{
+    width: 80%;    
+    margin-left: 10%;
+    border-top: none;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+label {
+    margin-left: 44%;
+    font-size: larger;
+}
+
+textarea {
+    padding: 15px;
+    margin-top: 1%;
+    margin-left: 22%;
+    font-size: larger;
+}

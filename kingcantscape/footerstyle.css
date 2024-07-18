@@ -1,0 +1,35 @@
+/* Reset de margin e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o footer */
+.footer {
+    background-color: #e6b800;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; /* Espaçamento interno do footer */
+    bottom: 0;
+    width: 100%;
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-links a {
+    margin-right: 10px; /* Espaçamento entre os ícones das redes sociais */
+}
+
+.social-links img {
+    width: 30px; /* Tamanho dos ícones das redes sociais */
+    height: auto;
+}
+
+.copyright {
+    font-size: 14px;
+}
