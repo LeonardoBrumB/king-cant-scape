@@ -1,0 +1,106 @@
+body {
+    background-image: url("fundo.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.body_consult {
+    background-image: url("a\ kingdom\ at\ night\ \(2\).jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container {
+    margin-top: 2%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    margin-top: 2%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.seila{
+    margin-top: 2%;
+}
+
+.registro {
+    font-family: Arial, sans-serif;
+    background-color: #ffffffc9;
+    border: 2px solid black;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-bottom: 20px; /* Adicionando margem inferior para separar do botão */
+}
+
+.registro p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.registro label {
+    margin-bottom: 5px;
+}
+
+.registro input[type="text"],
+.registro input[type="password"],
+.registro input[type="email"],
+.registro input[type="date"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.registro button[type="submit"] {
+    padding: 10px;
+    background-color: #fffb28;
+    color: #000000;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.registro button[type="submit"]:hover {
+    background-color: #b3a700;
+}
+
+.registro .mensagem {
+    margin-top: 10px;
+    color: red;
+    font-size: 14px;
+    text-align: center;
+}
+
+.seila .mensagem {
+    margin-top: 10px;
+    color: red;
+    font-size: 14px;
+    text-align: center;
+}
+
+.seila a {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

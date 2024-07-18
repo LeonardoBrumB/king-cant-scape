@@ -1,0 +1,101 @@
+/* Reset de margin e padding */
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o header */
+.header {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* Garante que o header ocupe toda a largura disponível */
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.imagemLogo {
+    max-width: 50px;
+    /* Ajuste o tamanho da imagem do logo conforme necessário */
+    margin-right: 10px;
+    /* Espaçamento entre a imagem do logo e o texto */
+}
+
+.nomeLogo {
+    font-size: 20px;
+    /* Tamanho do texto do nome do site */
+    font-weight: bold;
+}
+
+.btnHeader {
+    margin-left: 20px;
+    /* Espaçamento entre os botões */
+}
+
+.btn-download {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-admin {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-left: 50px;
+}
+
+.btn-download:hover {
+    background-color: #e6b800;
+}
+
+.login {
+    margin-left: auto;
+    /* Alinha o bloco de login à direita */
+}
+
+.login a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-top: 8px;
+    border: #c9a100 1px solid;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+.login a:hover {
+    background-color: #e6b800;
+}
+
+.iconLogin {
+
+    margin-left: 5px;
+    /* Espaçamento entre o ícone e o texto */
+}
