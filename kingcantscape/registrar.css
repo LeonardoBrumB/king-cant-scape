@@ -1,14 +1,17 @@
-*, *::before, *::after{
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0 auto;
     box-sizing: border-box;
     font-family: "Baskervville SC", serif;
 }
 
-.container form{
+.container form {
     margin-bottom: 2%;
- }
-.container a{
+}
+
+.container a {
     padding: 10px 20px;
     background-color: #ffcc00;
     color: #1a1a1a;
@@ -16,6 +19,11 @@
     border-radius: 5px;
     font-size: 16px;
     transition: background-color 0.3s ease;
+}
+
+html {
+    height: 100%;
+    position: relative;
 }
 
 .container a:hover {
@@ -26,25 +34,30 @@ body {
     background-image: url("fundo.jpeg");
     background-repeat: no-repeat;
     background-size: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
 .body_consult {
     background-image: url("a\ kingdom\ at\ night\ \(2\).jpg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
-.body_editar_feed{
+.body_editar_feed {
     background-image: url("a\ kingdom\ at\ night\ \(1\).jpg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
-main{
+main {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin-top: 2%;
+    flex: 1 0 auto;
 }
 
 .registro {
@@ -58,6 +71,7 @@ main{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
 }
+
 .registro_edit {
     align-items: center;
     text-align: center;
@@ -67,11 +81,12 @@ main{
     padding: 25px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 40%;
-    margin-bottom: 20px; /* Adicionando margem inferior para separar do botão */
+    width: 100%;
+    margin-bottom: 20px;
+    /* Adicionando margem inferior para separar do botão */
 }
 
-.registro_edit textarea{
+.registro_edit textarea {
     resize: none;
 }
 
@@ -134,7 +149,7 @@ main{
     border-radius: 3px;
     font-size: 14px;
     width: 100%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .registro_edit .input_enviar[type="submit"] {
@@ -174,3 +189,7 @@ main{
     font-size: 14px;
 }
 
+footer {
+    flex-shrink: 0;
+    /* Impede que o footer seja encolhido */
+}
