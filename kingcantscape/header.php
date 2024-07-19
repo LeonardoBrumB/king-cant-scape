@@ -77,11 +77,9 @@ if ($logged_in) {
 
         <?php if($exibirBotoesAdmin): ?>
         <div class="admin-buttons">
-            <a href="CRUDFeedback.php" class="btn-admin">CRUD Feedback</a>
             <a href="CRUDUsuario.php" class="btn-admin">CRUD Usuário</a>
         </div>
         <?php endif; ?>
-
         <div class="login">
             <?php if($logged_in): ?>
                 <span>

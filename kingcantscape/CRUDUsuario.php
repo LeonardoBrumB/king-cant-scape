@@ -47,26 +47,11 @@ if ($search || $order_by) {
     
     <main>
         <table>
-            <form method="GET">
-
-                <input type="text" name="search" placeholder="Pesquisar por nick, nome ou email" value="<?php echo htmlspecialchars($search); ?>">
-
-                <div>
-                    <input value="" name="order_by" id="value-1" type="radio" <?php if ($order_by == "") echo 'checked'; ?>>
-                    <label for="value-1">Normal</label>
-
-                    <input value="nickname" name="order_by" id="value-2" type="radio" <?php if ($order_by == 'nickname') echo 'checked'; ?>>
-                    <label for="value-2">Nick</label>
-
-                    <input value="nome" name="order_by" id="value-3" type="radio" <?php if ($order_by == 'nome') echo 'checked'; ?>>
-                    <label for="value-3">Nome</label>
-                </div>
-                <button type="submit">Pesquisar</button>
-            </form><br><br>
+            
             <thead>
                 <tr>
                     <th>
-                        <label><strong>&nbsp;ID&nbsp;</strong></label>
+                        <label><strong>ID</strong></label>
                     </th>
                     <th>
                         <label><strong>Nome</strong></label>

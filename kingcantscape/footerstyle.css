@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px; /* Espaçamento interno do footer */
+    padding: 20px ; /* Espaçamento interno do footer */
     bottom: 0;
     width: 100%;
 }

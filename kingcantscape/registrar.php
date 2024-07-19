@@ -2,6 +2,8 @@
 include_once './config/Config.php';
 include_once './backend/Usuario.php';
 
+$mensagem = '';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = new Usuario($db);
     $nickname = $_POST['nickname'];
@@ -9,9 +11,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     $dataNasc = $_POST['dataNasc'];
-    $usuario->criar($nickname, $nome, $email, $senha, $dataNasc);
-    header('Location: login.php');
-    exit();
+
+    $nick = $usuario->verificarNick($nickname);
+    if ($nick) {
+        $mensagem = 'Esse nickname já existe';
+    } else {
+        $usuario->registrar($nome,$nickname,$dataNasc, $email , $senha);
+        header('Location: login.php');
+        exit();
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -41,13 +49,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <label for="senha">Senha</label>
             <input type="password" name="senha" required maxlength="255">
 
-            <label for="dataNasc">Ano de Nascimento</label>
-            <input type="date" name="dataNasc" required maxlength="4" placeholder="2000">
+            <label for="dataNasc">Data de Nascimento</label>
+            <input type="date" name="dataNasc" required>
 
             <button type="submit">Registrar</button>
+            <div class="mensagem">
+                <?php
+                if (isset($mensagem)) {
+                    echo '<p><strong>' . $mensagem . '</strong></p>';
+                }
+                ?>
+            </div>
         </form>
-</main>
-    <?php include_once "footer.php"; ?>
+    </main>
+        <?php include_once "footer.php"; ?>
 </body>
 
 </html>

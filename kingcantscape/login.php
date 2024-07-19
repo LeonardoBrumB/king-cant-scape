@@ -29,15 +29,15 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="registrar.css">
+    <link rel="stylesheet" type="text/css" href="login.css">
     <title>King Can't Scape!</title>
 </head>
 
 <body>
     <?php include_once "header.php"; ?>
-    <main class="seila">
+    <main>
         <form method="POST" class="registro">
-            <p>Autenticação</p>
+            <p>Autenticação</p><br>
             <label>Nickname</label>
             <input type="text" name="nickname" required />
             <label>Senha</label>
@@ -57,6 +57,9 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
 
     </main>
+    <footer>
+        <?php include_once "footer.php"; ?>
+    </footer>
 </body>
 
 </html>

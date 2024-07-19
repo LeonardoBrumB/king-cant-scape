@@ -16,6 +16,45 @@ try {
     exit;
 }
 
+if ($logged_in) {
+    // Inclui o arquivo de conexão com o banco de dados
+    include_once './backend/Database.php';
+
+    // Cria uma instância da classe Database
+    $database = new Database();
+    $conn = $database->getConnection(); // Obtém a conexão PDO
+
+    $usuario_id = $_SESSION['usuario_id']; // Obtém o ID do usuário da sessão
+
+    try {
+        // Prepara a consulta SQL
+        $stmt = $conn->prepare("SELECT adm FROM usuarios WHERE id = :id");
+        $stmt->bindParam(':id', $usuario_id);
+        $stmt->execute();
+
+        // Verifica se há resultados
+        if ($stmt->rowCount() > 0) {
+            $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+            $adm = $usuario['adm'];
+
+            // Verifica se o usuário é administrador
+            if ($adm == 1) {
+                $exibirBotoesAdmin = true;
+            } else {
+                $exibirBotoesAdmin = false;
+            }
+        } else {
+            // Caso o usuário não seja encontrado
+            $exibirBotoesAdmin = false;
+        }
+    } catch (PDOException $e) {
+        echo "Erro na consulta: " . $e->getMessage();
+        $exibirBotoesAdmin = false; // Define como falso em caso de erro
+    }
+} else {
+    $exibirBotoesAdmin = false;
+}
+
 $feedback = new Feedback($db);
 $dados_feedback = $feedback->lerFeed();
 ?>

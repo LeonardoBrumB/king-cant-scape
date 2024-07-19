@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: "Baskervville SC", serif;
+}
+
+.container {
+    margin-bottom: 2%;
+}
+
+body {
+    background-image: url("fundo.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0;
+    min-height: 100%;
+    flex-direction: column;
+}
+
+html {
+    height: 100%;
+    position: relative;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2%;
+}
+.registro_edit .btn{
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.registro_edit .btn:hover{
+    background-color: #e6b800;
+}
+
+.registro_edit {
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #ffffffc9;
+    border: 2px solid black;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 28%;
+    margin-bottom: 20px;
+    /* Adicionando margem inferior para separar do botão */
+}
+
+.registro_edit label {
+    margin-bottom: 5px;
+}
+
+.registro_edit input[type="text"],
+.registro_edit input[type="password"],
+.registro_edit input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.registro_edit .mensagem {
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    text-align: center;
+}
+
+.registro_edit label {
+    margin-bottom: 10px;
+}
+
+.registro_edit .input_enviar[type="text"],
+.registro_edit .input_enviar[type="password"],
+.registro_edit .input_enviar[type="email"],
+.registro_edit .input_enviar[type="date"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.registro_edit .input_enviar[type="submit"] {
+    padding: 10px;
+    background-color: #fffb28;
+    color: #000000;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.registro_edit button[type="submit"]:hover {
+    background-color: #b3a700;
+}
+
+.registro_edit .mensagem {
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    text-align: center;
+}
+
+footer {
+    flex-shrink: 0;
+    /* Impede que o footer seja encolhido */
+}

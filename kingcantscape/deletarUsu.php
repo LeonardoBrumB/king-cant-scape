@@ -15,5 +15,3 @@ $id = $_SESSION['usuario_id'];
 $usuario->deletar($id);
 session_destroy();
 header('location: index.php');
-
-?>

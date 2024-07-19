@@ -34,7 +34,7 @@ class Usuario
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function registrar($nickname, $nome, $email, $senha, $dataNasc)
+    public function registrar($nome,$nickname, $dataNasc, $email, $senha )
     {
         $query = "INSERT INTO " . $this->table_name . " (nome, nickname, datanasc, email, senha) VALUES (?,?,?,?,?)";
         $stmt = $this->conn->prepare($query);
@@ -59,6 +59,18 @@ class Usuario
         }
         return false;
     } // certo
+
+    public function verificarNick($nickname)
+    {
+        $query = "SELECT * FROM " . $this->table_name . " WHERE nickname = ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute([$nickname]);
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($usuario) {
+            return $usuario;
+        }
+        return false;
+    }
 
     public function ler()
     {

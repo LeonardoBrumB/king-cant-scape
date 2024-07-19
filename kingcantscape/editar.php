@@ -31,7 +31,7 @@ $row = $usuario->lerPorId($_SESSION['usuario_id']);
 <html lang="pt-br">
 
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="editar.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar usuário</title>
@@ -39,42 +39,37 @@ $row = $usuario->lerPorId($_SESSION['usuario_id']);
 
 <body>
     <?php include_once 'header.php'; ?>
-    <main>
-        <div>
-            <div>
-                <div>
-                    <h2>Editar</h2>
-                </div>
-            </div>
-            <div>
-                <form method="POST">
-                    <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+    <main class="container">
+        <form method="POST" class="registro_edit">
+            <h2>Editar</h2>
+            <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
 
-                    <div>
-                        <label for="nome">Nome:</label><br><br>
-                        <input type="text" name="nome" value="<?php echo $row['nome']; ?>" required>
-                        <br><br>
-                    </div>
-                    <div>
-                        <label for="nickname">nickname:</label><br><br>
-                        <input required class="form-control" name="nickname" id="nickname" type="text" maxlength="16" value="<?php echo $row['nickname']; ?>">
-                    </div>
-                    <div>
-                        <label for="email">E-mail:</label><br><br>
-                        <input required name="email" id="email" type="email" value="<?php echo $row['email']; ?>">
-                    </div>
-                    <input style="margin-left: 31%" type="submit" name="login" value="Atualizar"><br><br>
-                </form>
-                <div>
-                    <?php if (isset($mensagem_erro)) {
-                        echo '<br><p> <strong>' . $mensagem_erro . '</strong></p>';
-                    }
-                    ?>
-                </div>
+            <div>
+                <label for="nome">Nome:</label><br><br>
+                <input type="text" name="nome" value="<?php echo $row['nome']; ?>" required>
+                <br><br>
             </div>
-        </div>
+            <div>
+                <label for="nickname">nickname:</label><br><br>
+                <input required class="form-control" name="nickname" id="nickname" type="text" maxlength="16" value="<?php echo $row['nickname']; ?>">
+            </div>
+            <div>
+                <label for="email">E-mail:</label><br><br>
+                <input required name="email" id="email" type="email" value="<?php echo $row['email']; ?>">
+            </div>
+            <input class="btn" type="submit" name="login" value="Atualizar"><br><br>
+            <div class="mensagem">
+                <?php if (isset($mensagem_erro)) {
+                    echo '<br><p> <strong>' . $mensagem_erro . '</strong></p>';
+                }
+                ?>
+            </div>
+        </form>
+
     </main>
-    <?php include_once 'footer.php'; ?>
+<footer>
+    <?php include_once "footer.php"; ?>
+</footer>
 </body>
 
 </html>
